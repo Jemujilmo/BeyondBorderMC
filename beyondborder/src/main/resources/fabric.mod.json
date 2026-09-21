@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "beyondborder",
+  "version": "${version}",
+  "name": "Beyond the Border",
+  "description": "Experiment: removes the world border and the hard +/-30,000,000 block coordinate limits (limit is configurable) so you can watch what breaks past them.",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.beyondborder.BeyondBorderMod"
+    ]
+  },
+  "mixins": [
+    "beyondborder.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "fabric-api": "*",
+    "minecraft": "1.21.6",
+    "java": ">=21"
+  }
+}

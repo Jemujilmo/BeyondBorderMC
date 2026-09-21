@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.beyondborder.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "dev.beyondborder.mixin.BeyondBorderMixinPlugin",
+  "refmap": "beyondborder-refmap.json",
+  "mixins": [
+    "WorldBorderMixin",
+    "WorldMixin",
+    "ServerPlayNetworkHandlerMixin",
+    "EntityMixin",
+    "PlayerEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
