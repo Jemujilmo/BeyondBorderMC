@@ -7,6 +7,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: beyondborder
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -18,4 +21,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: beyondborder-jars
-          path: build/libs/
+          path: beyondborder/build/libs/
