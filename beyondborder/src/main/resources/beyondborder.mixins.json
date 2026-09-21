@@ -10,7 +10,8 @@
     "WorldMixin",
     "ServerPlayNetworkHandlerMixin",
     "EntityMixin",
-    "PlayerEntityMixin"
+    "PlayerEntityMixin",
+    "AbstractChunkHolderMixin"
   ],
   "injectors": {
     "defaultRequire": 1
