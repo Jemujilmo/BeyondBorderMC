@@ -12,13 +12,30 @@ jobs:
         working-directory: beyondborder
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-java@v4
         with:
           java-version: 21
           distribution: temurin
+
       - run: chmod +x ./gradlew
+
       - run: ./gradlew build
+
+      # Diagnostic: scans the real 1.21.6 code for hard-coded world-size limits.
+      # Never fails the build; its output is uploaded as the "inspection" artifact.
+      - name: Scan Minecraft for world-size limits
+        continue-on-error: true
+        run: python3 tools/scan_limits.py
+
       - uses: actions/upload-artifact@v4
         with:
           name: beyondborder-jars
           path: beyondborder/build/libs/
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: inspection
+          path: beyondborder/inspection/
+          if-no-files-found: warn
