@@ -11,7 +11,8 @@
     "ServerPlayNetworkHandlerMixin",
     "EntityMixin",
     "PlayerEntityMixin",
-    "AbstractChunkHolderMixin"
+    "AbstractChunkHolderMixin",
+    "AquiferSamplerImplMixin"
   ],
   "injectors": {
     "defaultRequire": 1
